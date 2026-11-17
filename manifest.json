@@ -1,0 +1,53 @@
+{
+  "manifest_version": "0.3",
+  "name": "feeduna-mcp",
+  "display_name": "Feeduna",
+  "version": "0.1.1",
+  "description": "Read contextual customer feedback and app setup, or submit feedback with explicit write access.",
+  "author": {
+    "name": "performeon GmbH",
+    "url": "https://feeduna.com"
+  },
+  "homepage": "https://feeduna.com",
+  "documentation": "https://app.feeduna.com/docs#mcp",
+  "license": "MIT",
+  "privacy_policies": [
+    "https://app.feeduna.com/privacy"
+  ],
+  "keywords": [
+    "feedback",
+    "saas",
+    "linear",
+    "data",
+    "developer-tools"
+  ],
+  "server": {
+    "type": "node",
+    "entry_point": "src/cli.mjs",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/src/cli.mjs"
+      ],
+      "env": {
+        "FEEDUNA_API_URL": "https://app.feeduna.com",
+        "FEEDUNA_API_TOKEN": "${user_config.api_key}"
+      }
+    }
+  },
+  "compatibility": {
+    "runtimes": {
+      "node": ">=22.0.0"
+    }
+  },
+  "tools_generated": true,
+  "user_config": {
+    "api_key": {
+      "type": "string",
+      "title": "Feeduna access key",
+      "description": "Create an expiring key for one app in Feeduna App setup → Connect your tools. Grant only the scopes you need.",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}

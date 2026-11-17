@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.feeduna.app/mcp",
+  "title": "Feeduna",
+  "description": "Read, export and submit customer feedback for your app via a scoped, expiring Feeduna key.",
+  "version": "0.1.1",
+  "websiteUrl": "https://app.feeduna.com/docs#mcp",
+  "repository": {
+    "url": "https://github.com/performeon/feeduna-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/performeon/feeduna-mcp/releases/download/v0.1.1/feeduna-mcp-0.1.1.mcpb",
+      "version": "0.1.1",
+      "fileSha256": "e3a0d875b4407913b9e3155191ed7b30b983c583e31caccf189da9e1c3ec8668",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "FEEDUNA_API_TOKEN",
+          "description": "Scoped, expiring access key created in Feeduna App setup. Grant only the permissions needed.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

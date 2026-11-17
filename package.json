@@ -1,0 +1,28 @@
+{
+  "name": "@feeduna/mcp",
+  "version": "0.1.1",
+  "private": true,
+  "license": "MIT",
+  "files": [
+    "src/*.mjs",
+    "README.md",
+    "LICENSE",
+    "npm-shrinkwrap.json",
+    "manifest.json"
+  ],
+  "type": "module",
+  "description": "Customer-authorized Feeduna feedback tools over MCP stdio",
+  "bin": {
+    "feeduna-mcp": "src/cli.mjs"
+  },
+  "scripts": {
+    "start": "node src/cli.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.4.0",
+    "zod": "4.6.7"
+  }
+}
