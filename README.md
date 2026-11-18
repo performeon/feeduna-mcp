@@ -8,16 +8,20 @@ integration.
 
 ## Install the MCP bundle
 
-1. Sign in at https://app.feeduna.com/review and add your app.
+1. [Start a 14-day Feeduna trial](https://app.feeduna.com/review), or sign in to
+   an existing account, then add your app.
 2. In App setup → Connect your tools, create an expiring access key for that app.
    Grant only the scopes you need. `setup:read` reads setup instructions;
    `reports:read` reads feedback; `reports:write` permits feedback submission.
-3. Open the reviewed `feeduna-mcp-0.1.1.mcpb` file in a host that supports MCPB
-   Node bundles. Enter the key into the host's private Feeduna access-key field.
+3. Download `feeduna-mcp-0.1.1.mcpb` from the
+   [v0.1.1 release](https://github.com/performeon/feeduna-mcp/releases/tag/v0.1.1)
+   and open it in a host that supports MCPB Node bundles. Enter the key into the
+   host's private Feeduna access-key field.
    The bundle includes its production JavaScript dependencies. Your host must
    provide Node.js 22 or later. Other MCP hosts can run the bundled
    `src/cli.mjs` directly with Node and `FEEDUNA_API_TOKEN` in a private environment.
-4. Refresh the host's tool list. Only tools allowed by your key are returned.
+4. Refresh the host's tool list. With a `setup:read` key, run
+   `feeduna_get_setup` to confirm the connection and get your app's install instructions.
 
 Never put the key in source control, a prompt, a URL or shared configuration.
 Revoke it in Feeduna when you no longer need the integration. This bundle fixes
