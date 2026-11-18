@@ -38,13 +38,14 @@ the API destination to https://app.feeduna.com. No API key is included.
 1. Unpack the [v0.1.1 bundle](https://github.com/performeon/feeduna-mcp/releases/tag/v0.1.1)
    as a ZIP archive. Keep `src` and `node_modules` together. Find the full paths
    to `src/cli.mjs` and your Node.js 22+ executable.
-2. Create a Feeduna key with only `setup:read`. Supply it through your local
-   secret manager as `FEEDUNA_API_TOKEN` in the environment of the process that
-   launches VS Code. Setting it in a terminal inside an already running editor
-   does not set the variable for Copilot.
-3. Add the `feeduna` entry under `mcpServers` in your private
-   [Copilot user configuration](https://code.visualstudio.com/docs/agents/reference/mcp-configuration)
-   (`~/.copilot/mcp-config.json` by default). Replace the two example paths.
+2. Create a Feeduna key with only `setup:read`. Use your secret manager to set
+   `FEEDUNA_API_TOKEN` in the environment that launches VS Code or Copilot CLI.
+   For a remote session, set it on the host that runs Copilot.
+3. In VS Code, select the **Copilot** harness. Add the `feeduna` entry under
+   `mcpServers` in your private **Copilot Global** configuration
+   (`~/.copilot/mcp-config.json` by default). Copilot CLI on the same host reads
+   that file too. Replace the two example paths.
+   [Copilot configuration reference](https://code.visualstudio.com/docs/agents/reference/mcp-configuration).
 
 ```json
 {
@@ -63,8 +64,10 @@ the API destination to https://app.feeduna.com. No API key is included.
 }
 ```
 
-Open a Copilot chat and approve `feeduna_get_setup` when prompted to confirm
-the connection. Share the host and the step where you got stuck in the
+In a Copilot session, ask it to run `feeduna_get_setup` and tell you which app
+it returned. Approve the setup tool if prompted and check its actual result.
+Verified with GitHub Copilot CLI 1.0.114 and a synthetic Feeduna app.
+Share the host and the step where you got stuck in the
 [install-testing thread](https://github.com/performeon/feeduna-mcp/issues/1).
 
 ### Gemini CLI
