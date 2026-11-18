@@ -23,6 +23,11 @@ integration.
 4. Refresh the host's tool list. With a `setup:read` key, run
    `feeduna_get_setup` to confirm the connection and get your app's install instructions.
 
+In Claude Desktop, go to **Settings → Desktop app**, select **Manage** next to
+**Extensions**, then open **Advanced settings → Install Extension…** and select
+the `.mcpb` file. The app includes a Node.js runtime. See
+[Claude's desktop extension guide](https://support.claude.com/en/articles/10949351-getting-started-with-local-mcp-servers-on-claude-desktop).
+
 Never put the key in source control, a prompt, a URL or shared configuration.
 Revoke it in Feeduna when you no longer need the integration. This bundle fixes
 the API destination to https://app.feeduna.com. No API key is included.
