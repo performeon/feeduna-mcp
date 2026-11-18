@@ -67,6 +67,36 @@ Open a Copilot chat and approve `feeduna_get_setup` when prompted to confirm
 the connection. Share the host and the step where you got stuck in the
 [install-testing thread](https://github.com/performeon/feeduna-mcp/issues/1).
 
+### Gemini CLI
+
+1. Unpack the [v0.1.1 bundle](https://github.com/performeon/feeduna-mcp/releases/tag/v0.1.1) as ZIP. Keep `src` and `node_modules` together and use Node.js 22 or later.
+2. Create an expiring Feeduna key with only `setup:read`. Make `FEEDUNA_API_TOKEN` available in the environment of the terminal that launches Gemini CLI. Keep the actual key out of `settings.json`.
+3. Merge this entry into `~/.gemini/settings.json` and replace the two example paths.
+
+```json
+{
+  "mcpServers": {
+    "feeduna": {
+      "command": "/absolute/path/to/node",
+      "args": [
+        "/absolute/path/to/feeduna-mcp/src/cli.mjs"
+      ],
+      "env": {
+        "FEEDUNA_API_TOKEN": "${FEEDUNA_API_TOKEN}"
+      },
+      "includeTools": [
+        "feeduna_get_setup"
+      ]
+    }
+  }
+}
+```
+
+Run `gemini mcp list` and look for **Connected**. In Gemini CLI, ask it to run
+`feeduna_get_setup` for the installation instructions and approve the tool if
+prompted. This setup reads instructions without changing your app.
+Verified with Gemini CLI 0.68.0 and a synthetic Feeduna app.
+
 ## Try your first feedback report
 
 In [App setup](https://app.feeduna.com/review?view=setup), choose your app and
