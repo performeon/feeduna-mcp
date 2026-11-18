@@ -33,6 +33,17 @@ Never put the key in source control, a prompt, a URL or shared configuration.
 Revoke it in Feeduna when you no longer need the integration. This bundle fixes
 the API destination to https://app.feeduna.com. No API key is included.
 
+## Try your first feedback report
+
+In [App setup](https://app.feeduna.com/review?view=setup), choose your app and
+select **Test my widget**. Send a report from the sample page, then open the
+labelled test report in your Feeduna inbox. This works before you edit your site.
+
+To collect feedback from your own users, add the snippet returned by
+`feeduna_get_setup`. Follow the [installation guide](https://app.feeduna.com/docs#install)
+or [Next.js example](https://app.feeduna.com/docs#nextjs). If your app shows AI
+answers or data results, you can [attach the exact result to a report](https://app.feeduna.com/docs#results).
+
 ## Tools
 
 | Tool | Scope | Effect |
@@ -86,7 +97,7 @@ Bundled production dependencies retain their own licences:
 (Apache-2.0), and `zod` 4.6.7 (MIT). Their licence files are retained in
 node_modules. Dependency versions and integrity hashes are in npm-shrinkwrap.json.
 
-The SDK handles MCP stdio and protocol negotiation. This release candidate was
-checked with a synthetic local API fixture; that is not evidence of installation
-in a particular customer MCP host. See the publisher's release evidence for
-exact validation scope.
+The SDK handles MCP stdio and protocol negotiation. Release checks used the
+published bundle with synthetic feedback. Setup and revocation were checked
+against a local Feeduna instance using MCP protocol revisions 2025-06-18 and
+2025-11-25.
