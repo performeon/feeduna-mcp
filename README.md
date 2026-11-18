@@ -77,6 +77,8 @@ To collect feedback from your own users, add the snippet returned by
 `feeduna_get_setup`. Follow the [installation guide](https://app.feeduna.com/docs#install)
 or [Next.js example](https://app.feeduna.com/docs#nextjs). If your app shows AI
 answers or data results, you can [attach the exact result to a report](https://app.feeduna.com/docs#results).
+To take that report through review and send it to Linear, follow the
+[one-screen feedback walkthrough](https://app.feeduna.com/guides/customer-feedback-to-linear).
 
 ## Tools
 
