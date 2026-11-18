@@ -23,7 +23,8 @@ integration.
 4. Refresh the host's tool list. With a `setup:read` key, run
    `feeduna_get_setup` to confirm the connection and get your app's install instructions.
 
-In Claude Desktop, go to **Settings → Desktop app**, select **Manage** next to
+On macOS, open the `.mcpb` file with Claude Desktop to see the install preview.
+To install from within Claude Desktop, go to **Settings → Desktop app** and select **Manage** next to
 **Extensions**, then open **Advanced settings → Install Extension…** and select
 the `.mcpb` file. The app includes a Node.js runtime. See
 [Claude's desktop extension guide](https://support.claude.com/en/articles/10949351-getting-started-with-local-mcp-servers-on-claude-desktop).
