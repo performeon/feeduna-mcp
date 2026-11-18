@@ -33,6 +33,40 @@ Never put the key in source control, a prompt, a URL or shared configuration.
 Revoke it in Feeduna when you no longer need the integration. This bundle fixes
 the API destination to https://app.feeduna.com. No API key is included.
 
+### VS Code with the Copilot harness
+
+1. Unpack the [v0.1.1 bundle](https://github.com/performeon/feeduna-mcp/releases/tag/v0.1.1)
+   as a ZIP archive. Keep `src` and `node_modules` together. Find the full paths
+   to `src/cli.mjs` and your Node.js 22+ executable.
+2. Create a Feeduna key with only `setup:read`. Supply it through your local
+   secret manager as `FEEDUNA_API_TOKEN` in the environment of the process that
+   launches VS Code. Setting it in a terminal inside an already running editor
+   does not set the variable for Copilot.
+3. Add the `feeduna` entry under `mcpServers` in your private
+   [Copilot user configuration](https://code.visualstudio.com/docs/agents/reference/mcp-configuration)
+   (`~/.copilot/mcp-config.json` by default). Replace the two example paths.
+
+```json
+{
+  "mcpServers": {
+    "feeduna": {
+      "type": "stdio",
+      "command": "/absolute/path/to/node",
+      "args": ["/absolute/path/to/feeduna-mcp/src/cli.mjs"],
+      "env": {
+        "FEEDUNA_API_URL": "https://app.feeduna.com",
+        "FEEDUNA_API_TOKEN": "${FEEDUNA_API_TOKEN}"
+      },
+      "tools": ["feeduna_get_setup"]
+    }
+  }
+}
+```
+
+Open a Copilot chat and approve `feeduna_get_setup` when prompted to confirm
+the connection. Share the host and the step where you got stuck in the
+[install-testing thread](https://github.com/performeon/feeduna-mcp/issues/1).
+
 ## Try your first feedback report
 
 In [App setup](https://app.feeduna.com/review?view=setup), choose your app and
