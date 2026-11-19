@@ -100,6 +100,30 @@ Run `gemini mcp list` and look for **Connected**. In Gemini CLI, ask it to run
 prompted. This setup reads instructions without changing your app.
 Verified with Gemini CLI 0.68.0 and a synthetic Feeduna app.
 
+### Codex CLI
+
+1. Download and unpack `feeduna-mcp-0.1.1.mcpb` from the [v0.1.1 release](https://github.com/performeon/feeduna-mcp/releases/tag/v0.1.1). Use Node.js 22 or later.
+2. Create an expiring Feeduna key with only `setup:read`. Use your secret manager to set `FEEDUNA_API_TOKEN` in the environment that launches Codex.
+3. Add this to your user `~/.codex/config.toml`. Replace both paths with their absolute paths on your machine. Keep the actual key out of the file.
+
+```toml
+[mcp_servers.feeduna]
+command = "/absolute/path/to/node"
+args = ["/absolute/path/to/feeduna-mcp/src/cli.mjs"]
+env_vars = ["FEEDUNA_API_TOKEN"]
+enabled_tools = ["feeduna_get_setup"]
+
+[mcp_servers.feeduna.env]
+FEEDUNA_API_URL = "https://app.feeduna.com"
+```
+
+Start a Codex session and use `/mcp` to check the connection. Ask Codex to run
+`feeduna_get_setup` to get the install snippet for your app. This tool reads
+setup instructions. [Codex MCP documentation](https://learn.chatgpt.com/docs/extend/mcp?surface=cli).
+
+Verified with the native MCP host in Codex CLI 0.169.0-alpha.11.1 and a synthetic
+Feeduna app, using the published v0.1.1 bundle.
+
 ## Try your first feedback report
 
 In [App setup](https://app.feeduna.com/review?view=setup), choose your app and
