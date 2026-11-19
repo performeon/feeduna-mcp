@@ -171,10 +171,10 @@ https://app.feeduna.com/docs for the request schema and examples.
 
 ## Trial and pricing
 
-Feeduna offers an open 14-day trial without a card or automatic charge. The site
-displays an approximate USD price; the paid subscription is invoiced and charged
-at EUR25 per month. Paid checkout currently supports US businesses. Connector
-source licensing does not grant a Feeduna subscription or waive service terms.
+Try Feeduna free for 14 days. [See the current trial terms and pricing](https://app.feeduna.com/#pricing).
+The site displays an approximate USD price. Paid subscriptions are invoiced and
+charged at EUR25 per month. Paid checkout currently supports US businesses.
+The connector licence covers the connector source.
 
 ## Data and security
 
