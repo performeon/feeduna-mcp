@@ -121,6 +121,10 @@ Start a Codex session and use `/mcp` to check the connection. Ask Codex to run
 `feeduna_get_setup` to get the install snippet for your app. This tool reads
 setup instructions. [Codex MCP documentation](https://learn.chatgpt.com/docs/extend/mcp?surface=cli).
 
+A successful result includes `data.project` (ID, name, and origin),
+`data.embed_url`, and `data.snippet`. Check the project name and origin against
+App setup. The snippet’s `data-project` should match `data.project.id`.
+
 Verified with the native MCP host in Codex CLI 0.169.0-alpha.11.1 and a synthetic
 Feeduna app, using the published v0.1.1 bundle.
 
