@@ -136,8 +136,13 @@ labelled test report in your Feeduna inbox. This works before you edit your site
 
 To collect feedback from your own users, add the snippet returned by
 `feeduna_get_setup`. Follow the [installation guide](https://app.feeduna.com/docs#install)
-or [Next.js example](https://app.feeduna.com/docs#nextjs). If your app shows AI
-answers or data results, you can [attach the exact result to a report](https://app.feeduna.com/docs#results).
+or [Next.js example](https://app.feeduna.com/docs#nextjs).
+
+When a customer reports an AI answer, [add a “Report this answer” button](https://app.feeduna.com/guides/ai-answer-feedback).
+Pass a versioned ID from your app so your team can find the reported answer
+again after regeneration. For other records and results, use
+[the data feedback example](https://app.feeduna.com/docs#results).
+
 Connect your Linear team in Feeduna’s App setup, then follow the
 [first-report guide](https://app.feeduna.com/guides/customer-feedback-to-linear) to review and send one report.
 See [Feeduna in the Linear Integrations directory](https://linear.app/integrations/feeduna).
