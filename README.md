@@ -1,15 +1,20 @@
 # Feeduna MCP connector
 
-Version 0.1.1. Bring contextual feedback from your Feeduna app into a compatible
-local MCP host. Read installation guidance, list and export feedback, or submit
-feedback when you explicitly grant write access. Node.js 22 or later is required.
-This is a local stdio connector, not a hosted HTTP MCP endpoint or remote OAuth
-integration.
+Collect feedback on the exact feature, AI answer, or data result a customer saw.
+Your team can review the report in Feeduna and send it to Linear.
+
+[Try the interactive demo](https://app.feeduna.com/demo?example=data-result) ·
+[Start a 14-day trial in App setup](https://app.feeduna.com/review?view=setup)
+
+The v0.1.1 connector brings that context into a compatible local MCP host.
+Read installation guidance, list and export feedback, or submit feedback when
+you grant write access.
 
 ## Install the MCP bundle
 
-1. [Start a 14-day Feeduna trial](https://app.feeduna.com/review), or sign in to
-   an existing account, then add your app.
+The connector runs over local stdio on Node.js 22 or later.
+
+1. Open [App setup](https://app.feeduna.com/review?view=setup), sign in, and add your app.
 2. In App setup → Connect your tools, create an expiring access key for that app.
    Grant only the scopes you need. `setup:read` reads setup instructions;
    `reports:read` reads feedback; `reports:write` permits feedback submission.
