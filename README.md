@@ -138,6 +138,12 @@ To collect feedback from your own users, add the snippet returned by
 `feeduna_get_setup`. Follow the [installation guide](https://app.feeduna.com/docs#install)
 or [Next.js example](https://app.feeduna.com/docs#nextjs).
 
+Then open **App setup → Check widget on your site** and enter the full URL of
+the page where you added the snippet. **Widget connected on this page** confirms
+that the widget can reach Feeduna from that app's configured origin without
+sending a report. If the check does not appear, confirm the snippet is on that
+page.
+
 When a customer reports an AI answer, [add a “Report this answer” button](https://app.feeduna.com/guides/ai-answer-feedback).
 Pass a versioned ID from your app so your team can find the reported answer
 again after regeneration. For other records and results, use
