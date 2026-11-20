@@ -117,6 +117,22 @@ Verified with Gemini CLI 0.68.0 and a synthetic Feeduna app.
 
 ### Codex CLI
 
+With Node.js 22 or later and `npm` on your path, install the setup plugin from
+this repository's marketplace:
+
+```sh
+codex plugin marketplace add performeon/feeduna-mcp --ref main
+codex plugin add feeduna-setup@feeduna-tools
+```
+
+Create an expiring `setup:read` key in Feeduna **App setup**. Use your secret
+manager to set `FEEDUNA_API_TOKEN` in the environment that launches Codex. Open
+a new Codex session and ask it to run `feeduna_get_setup`. Confirm that the
+returned project and embed snippet match your app. The plugin exposes only the
+setup tool and uses the published 0.1.1 connector source.
+
+#### Manual Codex CLI setup
+
 1. Download and unpack `feeduna-mcp-0.1.1.mcpb` from the [v0.1.1 release](https://github.com/performeon/feeduna-mcp/releases/tag/v0.1.1). Use Node.js 22 or later.
 2. Create an expiring Feeduna key with only `setup:read`. Use your secret manager to set `FEEDUNA_API_TOKEN` in the environment that launches Codex.
 3. Add this to your user `~/.codex/config.toml`. Replace both paths with their absolute paths on your machine. Keep the actual key out of the file.

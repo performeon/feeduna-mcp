@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "feeduna": {
+      "command": "npm",
+      "args": [
+        "exec",
+        "--yes",
+        "--ignore-scripts",
+        "--package=https://codeload.github.com/performeon/feeduna-mcp/tar.gz/cbc802969c75683b457774f803eb6e0700704ebb",
+        "--",
+        "feeduna-mcp"
+      ],
+      "env": {
+        "FEEDUNA_API_URL": "https://app.feeduna.com",
+        "FEEDUNA_ALLOW_LOCAL_HTTP": "0"
+      },
+      "env_vars": ["FEEDUNA_API_TOKEN"],
+      "enabled_tools": ["feeduna_get_setup"],
+      "startup_timeout_sec": 60
+    }
+  }
+}

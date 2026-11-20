@@ -1,0 +1,12 @@
+{
+  "name": "feeduna-tools",
+  "interface": { "displayName": "Feeduna" },
+  "plugins": [
+    {
+      "name": "feeduna-setup",
+      "source": { "source": "local", "path": "./plugins/feeduna-setup" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Development"
+    }
+  ]
+}

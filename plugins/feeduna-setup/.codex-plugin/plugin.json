@@ -1,0 +1,10 @@
+{
+  "name": "feeduna-setup",
+  "version": "0.1.0",
+  "description": "Get the widget snippet for your Feeduna app and send reviewed customer feedback to Linear from Feeduna.",
+  "author": { "name": "Feeduna", "url": "https://app.feeduna.com" },
+  "homepage": "https://app.feeduna.com/guides/customer-feedback-to-linear",
+  "repository": "https://github.com/performeon/feeduna-mcp",
+  "license": "MIT",
+  "mcpServers": "./.mcp.json"
+}
