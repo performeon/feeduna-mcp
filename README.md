@@ -72,6 +72,21 @@ Share the host and the step where you got stuck in the
 
 ### Gemini CLI
 
+With Node.js 22 or later and a supported Gemini CLI account, create an expiring
+key with `setup:read` in Feeduna **App setup**, then install the extension:
+
+```sh
+gemini extensions install https://github.com/performeon/feeduna-mcp
+```
+
+Enter the key when the CLI prompts for **Feeduna setup key**. Gemini CLI stores
+this setting in the system keychain. Run `gemini mcp list`, then approve
+`feeduna_get_setup` in a Gemini session to get the instructions for your app.
+The extension uses the published 0.1.1 connector source and exposes the setup
+tool.
+
+#### Manual Gemini CLI setup
+
 1. Unpack the [v0.1.1 bundle](https://github.com/performeon/feeduna-mcp/releases/tag/v0.1.1) as ZIP. Keep `src` and `node_modules` together and use Node.js 22 or later.
 2. Create an expiring Feeduna key with only `setup:read`. Make `FEEDUNA_API_TOKEN` available in the environment of the terminal that launches Gemini CLI. Keep the actual key out of `settings.json`.
 3. Merge this entry into `~/.gemini/settings.json` and replace the two example paths.
