@@ -1,0 +1,32 @@
+{
+  "name": "feeduna",
+  "version": "0.1.2",
+  "description": "Get the widget installation and Linear handoff instructions for your Feeduna app.",
+  "settings": [
+    {
+      "name": "Feeduna setup key",
+      "description": "An expiring Feeduna API key with the setup:read permission, created in App setup.",
+      "envVar": "FEEDUNA_API_TOKEN",
+      "sensitive": true
+    }
+  ],
+  "mcpServers": {
+    "feeduna": {
+      "command": "npm",
+      "args": [
+        "exec",
+        "--yes",
+        "--ignore-scripts",
+        "--package=https://codeload.github.com/performeon/feeduna-mcp/tar.gz/cbc802969c75683b457774f803eb6e0700704ebb",
+        "--",
+        "feeduna-mcp"
+      ],
+      "env": {
+        "FEEDUNA_API_URL": "https://app.feeduna.com",
+        "FEEDUNA_ALLOW_LOCAL_HTTP": "0"
+      },
+      "includeTools": ["feeduna_get_setup"],
+      "timeout": 60000
+    }
+  }
+}
