@@ -1,8 +1,11 @@
 {
   "name": "feeduna-setup",
-  "version": "0.1.1",
-  "description": "Get the widget snippet for your Feeduna app and send reviewed customer feedback to Linear from Feeduna.",
-  "author": { "name": "Feeduna", "url": "https://app.feeduna.com" },
+  "version": "0.1.2",
+  "description": "Read the widget installation snippet for one Feeduna app.",
+  "author": {
+    "name": "Feeduna",
+    "url": "https://app.feeduna.com"
+  },
   "homepage": "https://app.feeduna.com/guides/customer-feedback-to-linear",
   "repository": "https://github.com/performeon/feeduna-mcp",
   "license": "MIT",
@@ -10,6 +13,10 @@
   "interface": {
     "displayName": "Feeduna Setup",
     "shortDescription": "Get the install snippet for your Feeduna app.",
-    "composerIcon": "./assets/feeduna-app-icon.svg"
+    "composerIcon": "./assets/feeduna-app-icon.svg",
+    "logo": "./assets/feeduna-app-icon.svg",
+    "websiteURL": "https://app.feeduna.com",
+    "privacyPolicyURL": "https://app.feeduna.com/privacy",
+    "termsOfServiceURL": "https://app.feeduna.com/terms"
   }
 }

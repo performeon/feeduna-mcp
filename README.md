@@ -117,7 +117,7 @@ Verified with Gemini CLI 0.68.0 and a synthetic Feeduna app.
 
 ### Codex CLI
 
-With Node.js 22 or later and `npm` on your path, install the setup plugin from
+With Node.js 22 or later on your path, install the setup plugin from
 this repository's marketplace:
 
 ```sh
@@ -129,7 +129,8 @@ Create an expiring `setup:read` key in Feeduna **App setup**. Use your secret
 manager to set `FEEDUNA_API_TOKEN` in the environment that launches Codex. Open
 a new Codex session and ask it to run `feeduna_get_setup`. Confirm that the
 returned project and embed snippet match your app. The plugin exposes only the
-setup tool and uses the published 0.1.1 connector source.
+setup tool. It runs the included 0.1.1 connector with Node without downloading
+a package at startup.
 
 #### Manual Codex CLI setup
 
