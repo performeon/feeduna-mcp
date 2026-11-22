@@ -6,7 +6,7 @@ Your team can review the report in Feeduna and send it to Linear.
 [Try the interactive demo](https://app.feeduna.com/demo?example=data-result) ·
 [Start a 14-day trial](https://app.feeduna.com/billing?intent=trial)
 
-The v0.1.4 connector brings that context into a compatible local MCP host.
+The v0.1.5 connector brings that context into a compatible local MCP host.
 See the [Feeduna installation guide](https://app.feeduna.com/docs#mcp). Your app key determines whether the connector can read setup instructions, read or export feedback, or submit a report.
 
 ## Install the MCP bundle
@@ -19,9 +19,9 @@ The connector runs over local stdio on Node.js 22 or later.
    key. For the first check, keep **Read setup instructions** (`setup:read`)
    selected and leave **Read and export feedback** and **Submit new feedback**
    off. Choose **Create key**. Add report permissions later if your tool needs them.
-3. Download [Feeduna MCP 0.1.4](https://app.feeduna.com/downloads/feeduna-mcp-0.1.4.mcpb)
-   and its [SHA-256 checksum](https://app.feeduna.com/downloads/feeduna-mcp-0.1.4.mcpb.sha256).
-   From the download folder, run `shasum -a 256 -c feeduna-mcp-0.1.4.mcpb.sha256` on macOS or `sha256sum -c feeduna-mcp-0.1.4.mcpb.sha256` on Linux.
+3. Download [Feeduna MCP 0.1.5](https://app.feeduna.com/downloads/feeduna-mcp-0.1.5.mcpb)
+   and its [SHA-256 checksum](https://app.feeduna.com/downloads/feeduna-mcp-0.1.5.mcpb.sha256).
+   From the download folder, run `shasum -a 256 -c feeduna-mcp-0.1.5.mcpb.sha256` on macOS or `sha256sum -c feeduna-mcp-0.1.5.mcpb.sha256` on Linux.
    Open the verified bundle in a host that supports MCPB Node bundles. Enter the key into the
    host's private Feeduna access-key field.
    The bundle includes its production JavaScript dependencies. Your host must
@@ -42,7 +42,7 @@ the API destination to https://app.feeduna.com. No API key is included.
 
 ### VS Code with the Copilot harness
 
-1. Unpack the [v0.1.4 bundle](https://app.feeduna.com/downloads/feeduna-mcp-0.1.4.mcpb)
+1. Unpack the [v0.1.5 bundle](https://app.feeduna.com/downloads/feeduna-mcp-0.1.5.mcpb)
    as a ZIP archive. Keep `src` and `node_modules` together. Find the full paths
    to `src/cli.mjs` and your Node.js 22+ executable.
 2. Create a Feeduna key with only `setup:read`. Use your secret manager to set
@@ -94,7 +94,7 @@ tool.
 
 #### Manual Gemini CLI setup
 
-1. Unpack the [v0.1.4 bundle](https://app.feeduna.com/downloads/feeduna-mcp-0.1.4.mcpb) as ZIP. Keep `src` and `node_modules` together and use Node.js 22 or later.
+1. Unpack the [v0.1.5 bundle](https://app.feeduna.com/downloads/feeduna-mcp-0.1.5.mcpb) as ZIP. Keep `src` and `node_modules` together and use Node.js 22 or later.
 2. Create an expiring Feeduna key with only `setup:read`. Make `FEEDUNA_API_TOKEN` available in the environment of the terminal that launches Gemini CLI. Keep the actual key out of `settings.json`.
 3. Merge this entry into `~/.gemini/settings.json` and replace the two example paths.
 
@@ -141,7 +141,7 @@ a package at startup.
 
 #### Manual Codex CLI setup
 
-1. Download and unpack `feeduna-mcp-0.1.4.mcpb` from the [Feeduna download](https://app.feeduna.com/downloads/feeduna-mcp-0.1.4.mcpb). Use Node.js 22 or later.
+1. Download and unpack `feeduna-mcp-0.1.5.mcpb` from the [Feeduna download](https://app.feeduna.com/downloads/feeduna-mcp-0.1.5.mcpb). Use Node.js 22 or later.
 2. Create an expiring Feeduna key with only `setup:read`. Use your secret manager to set `FEEDUNA_API_TOKEN` in the environment that launches Codex.
 3. Add this to your user `~/.codex/config.toml`. Replace both paths with their absolute paths on your machine. Keep the actual key out of the file.
 
@@ -164,7 +164,7 @@ A successful result includes `data.project` (ID, name, and origin),
 `data.embed_url`, and `data.snippet`. Check the project name and origin against
 App setup. The snippet’s `data-project` should match `data.project.id`.
 
-The manual setup runs the copy of `src/cli.mjs` from the 0.1.4 download. The separate marketplace plugin uses its bundled 0.1.1 connector.
+The manual setup runs the copy of `src/cli.mjs` from the 0.1.5 download. The separate marketplace plugin uses its bundled 0.1.1 connector.
 
 ## Try your first feedback report
 
