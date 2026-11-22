@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "feeduna-mcp",
   "display_name": "Feeduna",
-  "version": "0.1.1",
+  "version": "0.1.5",
   "description": "Read contextual customer feedback and app setup, or submit feedback with explicit write access.",
   "author": {
     "name": "performeon GmbH",
@@ -45,7 +45,7 @@
     "api_key": {
       "type": "string",
       "title": "Feeduna access key",
-      "description": "Create an expiring key for one app in Feeduna App setup → Connect your tools. Grant only the scopes you need.",
+      "description": "In Feeduna App setup, open Advanced settings → API and MCP (Connect your tools in older dashboards). For setup, select only Read setup instructions. Guide: https://app.feeduna.com/docs#api-access",
       "sensitive": true,
       "required": true
     }

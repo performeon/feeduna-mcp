@@ -26,7 +26,7 @@ export function readConfiguration(env = process.env) {
 
 const messages = {
   400: ['invalid_request', 'Feeduna rejected the request. Check the tool arguments.'],
-  401: ['unauthorized', 'Your Feeduna key is invalid, expired or revoked. Create a new one in App setup → Connect your tools.'],
+  401: ['unauthorized', 'Feeduna rejected this key. Check that it was created on the configured Feeduna origin. If it expired or was revoked, create a new app key: https://app.feeduna.com/docs#api-access'],
   402: ['subscription_required', 'New feedback requires an active Feeduna trial or subscription. Existing feedback can still be read with the appropriate scope.'],
   403: ['insufficient_scope', 'This Feeduna key does not allow that operation.'],
   404: ['not_found', 'The requested feedback or app is unavailable to this key.'],

@@ -2,8 +2,8 @@
 
 ## Supported releases
 
-The current bundled connector is [`0.1.1`](https://github.com/performeon/feeduna-mcp/releases/tag/v0.1.1).
-The published Codex and Gemini setup integrations use that connector source.
+The current [MCP bundle](https://app.feeduna.com/downloads/feeduna-mcp-0.1.5.mcpb) is version `0.1.5`.
+The separate Codex plugin and Gemini extension use connector version `0.1.1`.
 
 ## Report privately
 

@@ -3,7 +3,7 @@
   "name": "com.feeduna.app/mcp",
   "title": "Feeduna",
   "description": "Read, export and submit customer feedback for your app via a scoped, expiring Feeduna key.",
-  "version": "0.1.1",
+  "version": "0.1.5",
   "websiteUrl": "https://app.feeduna.com/docs#mcp",
   "repository": {
     "url": "https://github.com/performeon/feeduna-mcp",
@@ -12,9 +12,9 @@
   "packages": [
     {
       "registryType": "mcpb",
-      "identifier": "https://github.com/performeon/feeduna-mcp/releases/download/v0.1.1/feeduna-mcp-0.1.1.mcpb",
-      "version": "0.1.1",
-      "fileSha256": "e3a0d875b4407913b9e3155191ed7b30b983c583e31caccf189da9e1c3ec8668",
+      "identifier": "https://github.com/performeon/feeduna-mcp/releases/download/v0.1.5/feeduna-mcp-0.1.5.mcpb",
+      "version": "0.1.5",
+      "fileSha256": "7b21eb242c762fe64638c535a22b22a7ec3d6f1c64c90407b8530ffff7278a45",
       "transport": {
         "type": "stdio"
       },
