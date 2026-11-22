@@ -180,9 +180,10 @@ Then open **App setup → Check widget on your site** and enter the full URL of
 the page where you added the snippet. Look beside the feedback button for the
 result.
 
-- **Widget connected. Feedback collection is enabled.** Send one report from
-  that page and confirm it reaches the selected app’s inbox. Use **Ask a
-  customer for feedback** to copy an invitation.
+- **Widget connected. Feedback collection is enabled.** Use **Ask a customer
+  for feedback** to copy the invitation and share it with a customer. For your
+  own test, choose **Test in Feeduna**. When the customer sends a report, open
+  it in the app’s inbox, review it and send it to Linear.
 - **The widget is installed. Feedback collection is paused.** Select **Open
   Feeduna billing** to review your trial or subscription before
   inviting customers. Run the check again once collection is enabled.
