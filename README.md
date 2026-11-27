@@ -3,13 +3,13 @@
 Collect feedback on the exact feature, AI answer, or data result a customer saw.
 Your team can review the report in Feeduna and send it to Linear.
 
-[Connect Codex CLI directly](#connect-codex-cli-directly) ·
-[Install the local MCP bundle](#install-the-mcp-bundle) ·
-[Open App setup](https://app.feeduna.com/review?view=setup) ·
-[Try the interactive demo](https://app.feeduna.com/demo?example=data-result)
+[Try the demo](https://app.feeduna.com/demo?example=data-result) ·
+[Start a 14-day trial](https://app.feeduna.com/billing?intent=trial&flow=data-result) ·
+[Open API and MCP settings](https://app.feeduna.com/review?view=setup#api-and-mcp)
 
-New to Feeduna? [Start a 14-day trial](https://app.feeduna.com/billing?intent=trial&flow=data-result)
-to try the data feedback example with your own app.
+[Connect Codex CLI directly](#connect-codex-cli-directly) ·
+[Connect Claude Code directly](#connect-claude-code-directly) ·
+[Install the local MCP bundle](#install-the-mcp-bundle)
 
 Building a usage dashboard? [See how a customer flags an API charge and your team sends it to Linear](https://app.feeduna.com/guides/api-usage-feedback).
 The example runs in your browser before you create a key.
@@ -19,8 +19,8 @@ to read, export, or submit feedback when your tool needs it.
 
 ## Connect Codex CLI directly
 
-1. In [App setup](https://app.feeduna.com/review?view=setup), select your app,
-   open **Advanced settings → API and MCP**, and create a key with only
+1. Open [API and MCP settings](https://app.feeduna.com/review?view=setup#api-and-mcp),
+   select your app or environment, and create a key with only
    **Read setup instructions** (`setup:read`).
 2. Add this entry to your user `~/.codex/config.toml`. If you already have a
    `feeduna` entry, update it. Make `FEEDUNA_API_TOKEN` available in the private
@@ -40,14 +40,22 @@ The hosted connection uses Streamable HTTP. See the
 [setup guide](https://app.feeduna.com/guides/install-feeduna-mcp#hosted-mcp)
 for a copyable configuration and terminal instructions.
 
+## Connect Claude Code directly
+
+1. Open [API and MCP settings](https://app.feeduna.com/review?view=setup#api-and-mcp),
+   select your app or environment, and create a key with only
+   **Read setup instructions** (`setup:read`).
+2. Open **Connect Claude Code** in the [hosted setup guide](https://app.feeduna.com/guides/install-feeduna-mcp#hosted-mcp).
+   Use its copyable `.mcp.json` configuration and set the key in the environment that launches Claude Code.
+3. Ask Claude Code to call `feeduna_get_setup`. Verify the app name and origin before installing the returned snippet.
+
 ## Install the MCP bundle
 
 The connector runs over local stdio on Node.js 22 or later.
 
-1. Open [App setup](https://app.feeduna.com/review?view=setup), sign in, and add your app.
-2. Select your app in **App setup** and open **Advanced settings → API and MCP**.
-   If your dashboard shows **Connect your tools**, open that section. Name the
-   key. For the first check, keep **Read setup instructions** (`setup:read`)
+1. Open [API and MCP settings](https://app.feeduna.com/review?view=setup#api-and-mcp).
+   Sign in if needed and select or add your app.
+2. Name the key. For the first check, keep **Read setup instructions** (`setup:read`)
    selected and leave **Read and export feedback** and **Submit new feedback**
    off. Choose **Create key**. Add report permissions later if your tool needs them.
 3. Download [Feeduna MCP 0.1.5](https://app.feeduna.com/downloads/feeduna-mcp-0.1.5.mcpb)
@@ -113,7 +121,7 @@ Share the host and the step where you got stuck in the
 ### Gemini CLI
 
 With Node.js 22 or later and a supported Gemini CLI account, create an expiring
-key with `setup:read` in Feeduna **App setup**, then install the extension:
+key with `setup:read` in [API and MCP settings](https://app.feeduna.com/review?view=setup#api-and-mcp), then install the extension:
 
 ```sh
 gemini extensions install https://github.com/performeon/feeduna-mcp
@@ -165,7 +173,7 @@ codex plugin marketplace add performeon/feeduna-mcp --ref main
 codex plugin add feeduna-setup@feeduna-tools
 ```
 
-Create an expiring `setup:read` key in Feeduna **App setup**. Use your secret
+Create an expiring `setup:read` key in [API and MCP settings](https://app.feeduna.com/review?view=setup#api-and-mcp). Use your secret
 manager to set `FEEDUNA_API_TOKEN` in the environment that launches Codex. Open
 a new Codex session and ask it to run `feeduna_get_setup`. Confirm that the
 returned project and embed snippet match your app. The plugin exposes only the
@@ -255,7 +263,7 @@ https://app.feeduna.com/docs for the request schema and examples.
 
 ## Trial and pricing
 
-[Start a 14-day free trial](https://app.feeduna.com/billing?intent=trial).
+[Start a 14-day free trial](https://app.feeduna.com/billing?intent=trial&flow=data-result).
 Feeduna invoices and charges €25 per month plus applicable VAT. The USD price is
 an estimate. [Check pricing and availability for your billing country](https://app.feeduna.com/pricing#billing-countries).
 The connector licence covers the connector source.
