@@ -3,7 +3,8 @@
 Collect feedback on the exact feature, AI answer, or data result a customer saw.
 Your team can review the report in Feeduna and send it to Linear.
 
-[Install Feeduna MCP 0.1.5](https://app.feeduna.com/guides/install-feeduna-mcp) ·
+[Connect Codex CLI directly](#connect-codex-cli-directly) ·
+[Install the local MCP bundle](#install-the-mcp-bundle) ·
 [Open App setup](https://app.feeduna.com/review?view=setup) ·
 [Try the interactive demo](https://app.feeduna.com/demo?example=data-result)
 
@@ -13,9 +14,31 @@ to try the data feedback example with your own app.
 Building a usage dashboard? [See how a customer flags an API charge and your team sends it to Linear](https://app.feeduna.com/guides/api-usage-feedback).
 The example runs in your browser before you create a key.
 
-The connector runs in a compatible local MCP host. Start with a key that can
-read installation instructions. You can grant access to read, export, or
-submit feedback when your tool needs it.
+Start with a key that can read installation instructions. You can grant access
+to read, export, or submit feedback when your tool needs it.
+
+## Connect Codex CLI directly
+
+1. In [App setup](https://app.feeduna.com/review?view=setup), select your app,
+   open **Advanced settings → API and MCP**, and create a key with only
+   **Read setup instructions** (`setup:read`).
+2. Add this entry to your user `~/.codex/config.toml`. If you already have a
+   `feeduna` entry, update it. Make `FEEDUNA_API_TOKEN` available in the private
+   environment that launches Codex.
+
+   ```toml
+   [mcp_servers.feeduna]
+   url = "https://app.feeduna.com/api/mcp"
+   bearer_token_env_var = "FEEDUNA_API_TOKEN"
+   ```
+
+3. Start a new Codex session and ask it to run `feeduna_get_setup`. The result
+   includes your app name, origin, and widget snippet. Check these against
+   App setup before installing the snippet.
+
+The hosted connection uses Streamable HTTP. See the
+[setup guide](https://app.feeduna.com/guides/install-feeduna-mcp#hosted-mcp)
+for a copyable configuration and terminal instructions.
 
 ## Install the MCP bundle
 
@@ -134,7 +157,7 @@ Verified with Gemini CLI 0.68.0 and a synthetic Feeduna app.
 
 ### Codex CLI
 
-With Node.js 22 or later on your path, install the setup plugin from
+For local use with Node.js 22 or later, install the setup plugin from
 this repository's marketplace:
 
 ```sh
