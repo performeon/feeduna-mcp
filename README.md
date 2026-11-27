@@ -10,6 +10,9 @@ Your team can review the report in Feeduna and send it to Linear.
 New to Feeduna? [Start a 14-day trial](https://app.feeduna.com/billing?intent=trial&flow=data-result)
 to try the data feedback example with your own app.
 
+Building a usage dashboard? [See how a customer flags an API charge and your team sends it to Linear](https://app.feeduna.com/guides/api-usage-feedback).
+The example runs in your browser before you create a key.
+
 The connector runs in a compatible local MCP host. Start with a key that can
 read installation instructions. You can grant access to read, export, or
 submit feedback when your tool needs it.
@@ -34,6 +37,8 @@ The connector runs over local stdio on Node.js 22 or later.
    `src/cli.mjs` directly with Node and `FEEDUNA_API_TOKEN` in a private environment.
 4. Refresh the host's tool list. With a `setup:read` key, run
    `feeduna_get_setup` to confirm the connection and get your app's install instructions.
+
+Stuck getting the connector to run? [Request MCP setup help](https://app.feeduna.com/setup-help?topic=mcp).
 
 On macOS, open the `.mcpb` file with Claude Desktop to see the install preview.
 To install from within Claude Desktop, go to **Settings → Desktop app** and select **Manage** next to
