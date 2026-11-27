@@ -3,11 +3,16 @@
 Collect feedback on the exact feature, AI answer, or data result a customer saw.
 Your team can review the report in Feeduna and send it to Linear.
 
-[Try the interactive demo](https://app.feeduna.com/demo?example=data-result) ·
-[Start a 14-day trial](https://app.feeduna.com/billing?intent=trial)
+[Install Feeduna MCP 0.1.5](https://app.feeduna.com/guides/install-feeduna-mcp) ·
+[Open App setup](https://app.feeduna.com/review?view=setup) ·
+[Try the interactive demo](https://app.feeduna.com/demo?example=data-result)
 
-The v0.1.5 connector brings that context into a compatible local MCP host.
-See the [Feeduna installation guide](https://app.feeduna.com/docs#mcp). Your app key determines whether the connector can read setup instructions, read or export feedback, or submit a report.
+New to Feeduna? [Start a 14-day trial](https://app.feeduna.com/billing?intent=trial&flow=data-result)
+to try the data feedback example with your own app.
+
+The connector runs in a compatible local MCP host. Start with a key that can
+read installation instructions. You can grant access to read, export, or
+submit feedback when your tool needs it.
 
 ## Install the MCP bundle
 
